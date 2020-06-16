@@ -1,0 +1,13 @@
+!procedure STYLE_BASE()
+skinparam Shadowing false
+skinparam Padding 10
+skinparam ArrowColor black
+skinparam RectangleFontSize 16
+!endprocedure
+
+!procedure STYLE_USECASE()
+skinparam UsecaseBorderColor black
+skinparam UsecaseBackgroundColor none
+skinparam ActorBorderColor black
+skinparam ActorBackgroundColor none
+!endprocedure

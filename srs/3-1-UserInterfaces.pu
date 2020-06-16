@@ -1,0 +1,27 @@
+@startuml SystemContextDiagram
+
+!include ../common/styles.pu
+
+STYLE_BASE()
+STYLE_USECASE()
+
+title
+User Interfaces
+end title
+
+rectangle Server {
+    usecase "Web Server" as WS
+    usecase "Database" as DB
+}
+
+rectangle Client {
+    usecase "Web App" as WA
+}
+
+actor User
+
+User <-> WA : \t
+WA <-> WS : API (GraphQL)
+WS <-> DB : \t
+
+@enduml
