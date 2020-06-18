@@ -1,0 +1,40 @@
+@startuml ProductPerspective
+
+!include ../common/styles.pu
+
+STYLE_BASE()
+STYLE_USECASE()
+
+skinparam ComponentBackgroundColor white
+skinparam ComponentBorderColor black
+skinparam DatabaseBackgroundColor white
+skinparam InterfaceBackgroundColor white
+skinparam InterfaceBorderColor black
+skinparam NodeBackgroundColor white
+
+database Database as DB
+
+cloud Server {
+    component API as ApiServer
+    component Web as WebServer
+}
+
+node "External Systems" as External {
+    component "User Bank APIs" as Bank
+}
+
+interface HTTP
+
+component "Web Broswer Client" as WebClient
+
+actor User
+
+Bank <-> ApiServer : (Optional)\nUser data\nsynchronization
+ApiServer <--> HTTP : API requests
+WebServer <--> HTTP : Website requests
+WebClient <-> HTTP : All requests
+DB <--> ApiServer : Sanitized\ndata\nqueries
+DB <--> WebServer : Data for SSR
+User - WebClient : \t
+
+@enduml
