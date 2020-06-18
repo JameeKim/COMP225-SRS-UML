@@ -4,13 +4,7 @@
 
 STYLE_BASE()
 STYLE_USECASE()
-
-skinparam ComponentBackgroundColor white
-skinparam ComponentBorderColor black
-skinparam DatabaseBackgroundColor white
-skinparam InterfaceBackgroundColor white
-skinparam InterfaceBorderColor black
-skinparam NodeBackgroundColor white
+STYLE_COMPONENT()
 
 database Database as DB
 

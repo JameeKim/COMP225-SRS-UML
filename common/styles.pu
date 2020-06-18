@@ -11,3 +11,12 @@ skinparam UsecaseBackgroundColor none
 skinparam ActorBorderColor black
 skinparam ActorBackgroundColor none
 !endprocedure
+
+!procedure STYLE_COMPONENT()
+skinparam ComponentBackgroundColor white
+skinparam ComponentBorderColor black
+skinparam DatabaseBackgroundColor white
+skinparam InterfaceBackgroundColor white
+skinparam InterfaceBorderColor black
+skinparam NodeBackgroundColor white
+!endprocedure
